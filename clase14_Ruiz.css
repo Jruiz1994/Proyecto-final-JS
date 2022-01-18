@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway bold', sans-serif;
+    background-color: #e1f4f3;
+}
+
+#header {
+    background-image: url(Imagenes/banner1.jpg);
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
+}
+
+#logo {
+    width: 20px;
+    margin: 20px;
+}
+
+h1 {
+    margin: 60px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+}
+
+#divContenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 350px;
+    grid-column-gap: 10px;
+    grid-template-areas: "divAgregarMarca cotizacion" "divComprarAlimento tablaYDatos";
+    justify-items: center;
+}
+
+#divAgregarMarca {
+    grid-area: divAgregarMarca;
+    align-self: center;
+}
+
+#tablaYDatos {
+    grid-area: tablaYDatos;
+    align-self: center;
+}
+
+#cotizacion {
+    grid-area: cotizacion;
+    align-self: center;
+}
+
+#divComprarAlimento {
+    grid-area: divComprarAlimento;
+    align-self: center;
+}
+
+form {
+    margin-top: 40px;
+}
+
+select,
+input[type=text],
+[type=number] {
+    width: 300px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+input[type=button] {
+    padding: 10px;
+    background-color: #F4F4F4;
+    border-radius: 15px;
+    font-weight: bold;
+    /* margin-left: 145px;
+    margin-top: 10px; */
+}
+
+table {
+    background-color: #F4F4F4;
+    margin: 30px auto;
+}
+
+td {
+    width: 180px;
+    text-align: center;
+}

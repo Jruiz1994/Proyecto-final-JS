@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="clase14_Ruiz.css">
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="Imagenes/logo.png" alt="logo de la empresa">
+        <h1>COTIZADOR DE ALIMENTO PARA PERROS</h1>
+    </div>
+    <div id="divContenido">
+        <div id="divAgregarMarca">
+            <form>
+                <h2>Agregar marca de alimento</h2>
+                <label for="marcaNueva">Marca nueva:</label>
+                <input type="text" name="marcaNueva" id="marcaNueva"><br>
+                <label for="precioMarcaNueva">Costo mayorista ($ Ars):</label>
+                <input type="number" name="precioMarcaNueva" id="precioMarcaNueva"><br>
+                <input type="button" id="agregarMarca" value="Agregar">
+            </form>
+            <p id="pAgregarMarca"></p>
+        </div>
+
+
+        <div id="divComprarAlimento">
+            <form>
+                <h2>Comprar alimento</h2>
+                <label for="marcaSelect">Marca:</label>
+                <select name="marcaSelect" id="marcaSelect">
+                    <option selected value="0">Seleccione la marca:</option>
+                </select>
+                <br>
+                <label for="descuento">Descuento a aplicar:</label>
+                <input type="number" name="descuento" id="descuento"><br>
+                <label for="envio">Requiere envio a domicilio?</label>
+                <input type="radio" id="siEnvio" name="envio" value="Si">
+                <label for="siEnvio">Si</label>
+                <input type="radio" id="noEnvio" name="envio" value="No">
+                <label for="noEnvio">No</label><br>
+                <div id="envio" style="display: none;">
+                    <label for="direccionEnvio">Direccion de envio:</label>
+                    <input type="text" id="direccionEnvio" name="direccionEnvio" placeholder="Ingrese su direccion">
+                </div>
+                <label for="moneda">Moneda:</label>
+                <select name="monedaSelect" id="monedaSelect">
+                    <option selected value="$">$ Argentinos</option>
+                    <option value="USD">Dolares</option>
+                </select><br>
+                <input type="button" id="comprar" value="Comprar">
+            </form>
+        </div>
+
+        <div id="cotizacion">
+            <!-- <input type=button id="botonDolar" value="Obtener la cotización del dólar"> -->
+            <div id="cotizacionChild"></div>
+        </div>
+
+        <div id="tablaYDatos">
+            <input type="button" value="Generar y actualizar tabla" id="createTable">
+            <div id="resultados">
+
+            </div>
+            <p id="parrafo2"></p>
+        </div>
+    </div>
+
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="clase14_Ruiz.js" type="text/javascript"></script>
+</body>
+
+</html>
